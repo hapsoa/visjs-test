@@ -1,0 +1,65 @@
+html
+    head
+        script(type="text/javascript" src="/lodash/lodash.js")
+        script(type="text/javascript" src="/vis/dist/vis.js")
+        link(href="/vis/dist/vis.css" rel="stylesheet" type="text/css")
+        link(href="/stylesheets/side-info.css" rel="stylesheet")
+    body
+        aside
+            .group-information-title Group Information
+            .group-information-contents
+                .representative-thesis
+                    .middle-title Representative Thesis
+                    .thesis-info Title
+                    .thesis-title-content Information Visualization and Visual Data Mining, 1993
+                    .thesis-info Author
+                    .thesis-author-content Daniel A. Keim
+                    .thesis-info Paper Keyword
+                    .thesis-paper-keyword-content Visualization, Data Mining, Data
+
+                .group-keyword
+                    .middle-title Group Keyword
+                    .keyword-unit
+                        .keyword LimSuHyun
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-1
+                        .count 10회
+                    .keyword-unit
+                        .keyword YoonTaeRin
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-2
+                        .count 5회
+                    .keyword-unit
+                        .keyword WonMin
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-3
+                        .count 2회
+                    .keyword-unit
+                        .keyword JaeJong
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-4
+                        .count 2회
+                    .keyword-unit
+                        .keyword Data Visualization
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-5
+                        .count 1회
+                    .keyword-unit
+                        .keyword Data Mining
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-6
+                        .count 1회
+                    .keyword-unit
+                        .keyword Visualization
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-7
+                        .count 1회
+                    .keyword-unit
+                        .keyword Data
+                        .bar-graph-zone
+                            .bar-graph#bar-graph-8
+                        .count 1회
+                .group-network
+                    .middle-title Group Network
+                    #mynetwork
+        script(type="text/javascript" src="/javascripts/basic-network-example.js")
