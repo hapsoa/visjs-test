@@ -1,26 +1,3 @@
-class NetworkManager {
-
-    constructor() {
-
-    }
-
-    makeNetwork() {
-        this.network = new vis.Network(container, data, options);
-    }
-
-    deleteNetwork() {
-        if (!_.isNil(this.network)) {
-            this.network.destroy()
-        }
-    }
-}
-
-// function makeNetwork([]) {
-//
-//     if(어쩌고)
-//         network.destroy();
-// }
-
 // create an array with nodes
 const nodes = new vis.DataSet([
     {id: 1, title: 'The Challenge of Information Visualization Evaluzation',
