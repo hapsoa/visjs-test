@@ -21,7 +21,7 @@ class GroupKeyword {
                         "f258af24-e04a-49d4-86c3-1ab1c2f43914",
                         "fa96abdc-7c09-419b-a00d-4c24d5879eeb"
                     ],
-                    value: "5"
+                    // value: "5"
                 });
             const keywords = response.data; // array
             console.log('keywords : ', keywords);
@@ -48,9 +48,6 @@ class GroupKeyword {
             console.log(error);
         }
 
-
-
-        $('#bar-graph-1').css('width', 30)
     }
 }
 

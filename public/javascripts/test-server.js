@@ -78,7 +78,6 @@ axios.post('http://dblp.ourguide.xyz/papers/network', {
         "ea9489be-45f6-482f-937c-11b644d5f2ce",
         "f258af24-e04a-49d4-86c3-1ab1c2f43914",
         "fa96abdc-7c09-419b-a00d-4c24d5879eeb"
-
     ]
 })
     .then(function (response) {

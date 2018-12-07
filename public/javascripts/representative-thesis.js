@@ -13,8 +13,9 @@ class RepresentativeThesis {
 
             // 컨텐츠들 띄우기
             $('.thesis-title-content').text(thesisData.title);
-            $('.thesis-author-content').text(thesisData.authors);
-            $('.thesis-paper-keyword-content').text(thesisData.keyword);
+            $('.thesis-author-content').text(_.join(thesisData.authors, ', '));
+            $('.thesis-paper-keyword-content').text(_.join(thesisData.keyword, ', '));
+
         } catch (error) {
             console.log(error);
         }

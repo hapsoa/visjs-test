@@ -17,9 +17,9 @@ var edges = new vis.DataSet([
     {from: 1, to: 2, length: 70, width: 7},
     {from: 2, to: 4},
     {from: 2, to: 5, length: 70, width: 5},
-    {from: 6, to: 1},
-    {from: 7, to: 2},
-    {from: 8, to: 3, length: 300},
+    {from: 6, to: 1, length: 65},
+    {from: 7, to: 2, length: 300},
+    {from: 8, to: 3, length: 40},
 ]);
 
 // create a network
@@ -60,7 +60,7 @@ var options = {
         hover: true,
         hoverConnectedEdges: false, // false 하면, node 색상이 잘 호버가 된다.
         tooltipDelay: 200,
-        dragNodes: false
+        // dragNodes: false
     }
 };
 
