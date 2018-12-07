@@ -1,10 +1,17 @@
 class NetworkManager {
-    makeNetwork() {
+
+    constructor() {
 
     }
 
-    deleteNetwork() {
+    makeNetwork() {
+        this.network = new vis.Network(container, data, options);
+    }
 
+    deleteNetwork() {
+        if (!_.isNil(this.network)) {
+            this.network.destroy()
+        }
     }
 }
 
