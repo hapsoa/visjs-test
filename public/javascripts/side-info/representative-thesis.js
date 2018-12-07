@@ -3,11 +3,11 @@ class RepresentativeThesis {
 
     }
 
-    async makeView() {
+    async makeView(representativeThesisId) {
         // 서버에서 가져오기
         try {
             const response = await axios
-                .get('http://dblp.ourguide.xyz/papers/38135245-8eff-4078-af6a-ea559ffa660b/info');
+                .get(`http://dblp.ourguide.xyz/papers/${representativeThesisId}/info`);
             const thesisData = response.data;
             console.log('thesisData : ',thesisData);
 
@@ -23,6 +23,5 @@ class RepresentativeThesis {
 
 }
 
-const representativeThesis = new RepresentativeThesis();
-
-representativeThesis.makeView();
+// const representativeThesis = new RepresentativeThesis();
+// representativeThesis.makeView();

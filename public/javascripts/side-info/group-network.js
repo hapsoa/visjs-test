@@ -23,6 +23,14 @@ class NetworkManager {
             // networkData를 다시 여기 상황에 맞게 정제한다.
             const nodes = new vis.DataSet(
                 _.map(receivedData.node, (node) => {
+                    // 제목에 연도를 붙이고
+                    node.title = [node.title, ', ', node.year].join('');
+                    // node.title 이 글의 length가 30의 배수일 때마다, <br>을 넣는다.
+                    const countForProcess = parseInt(node.title.length / 30);
+                    for (let i = 0; i < countForProcess; i++) {
+                        node.title = [node.title.slice(0, (((i + 1) * 30) + (i * 4))), '<br>', node.title.slice((((i + 1) * 30) + (i * 4)))].join('');
+                    }
+
                     if (representativeThesisId !== node._id) {
                         return {
                             id: node._id,
@@ -114,22 +122,22 @@ class NetworkManager {
 
 }
 
-const networkManager = new NetworkManager();
-networkManager.makeNetwork([
-        "4be8eaca-a28a-4382-86c2-9314735066bd",
-        "7281e056-a2f6-4df3-bd54-fbd8ed8b737c",
-        "78efca65-ac1a-49bd-92ec-c8f0770fefb8",
-        "7d911d74-c4c1-4d4d-a737-5cf51e404c83",
-        "85bd9cc6-e41a-4fd4-8f3b-e776329efc4b",
-        "aa16086f-f3bf-432a-bfcd-9f1521c9ac52",
-        "cab91964-4e8d-4211-8d32-455cfd690b60",
-        "dc00221e-92c4-4ee4-8a7b-666ab5fd28c5",
-        "ea9489be-45f6-482f-937c-11b644d5f2ce",
-        "f258af24-e04a-49d4-86c3-1ab1c2f43914",
-        "fa96abdc-7c09-419b-a00d-4c24d5879eeb"
-    ],
-    "4be8eaca-a28a-4382-86c2-9314735066bd",
-    '#311B92');
+// const networkManager = new NetworkManager();
+// networkManager.makeNetwork([
+//         "4be8eaca-a28a-4382-86c2-9314735066bd",
+//         "7281e056-a2f6-4df3-bd54-fbd8ed8b737c",
+//         "78efca65-ac1a-49bd-92ec-c8f0770fefb8",
+//         "7d911d74-c4c1-4d4d-a737-5cf51e404c83",
+//         "85bd9cc6-e41a-4fd4-8f3b-e776329efc4b",
+//         "aa16086f-f3bf-432a-bfcd-9f1521c9ac52",
+//         "cab91964-4e8d-4211-8d32-455cfd690b60",
+//         "dc00221e-92c4-4ee4-8a7b-666ab5fd28c5",
+//         "ea9489be-45f6-482f-937c-11b644d5f2ce",
+//         "f258af24-e04a-49d4-86c3-1ab1c2f43914",
+//         "fa96abdc-7c09-419b-a00d-4c24d5879eeb"
+//     ],
+//     "4be8eaca-a28a-4382-86c2-9314735066bd",
+//     '#311B92');
 
 // 네트워크 파괴
 // setTimeout(() => {

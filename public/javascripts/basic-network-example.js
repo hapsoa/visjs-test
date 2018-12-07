@@ -1,9 +1,9 @@
 // create an array with nodes
 const nodes = new vis.DataSet([
-    {id: 1, title: 'The Challenge of Information Visualization Evaluzation',
+    {id: 1, title: 'The Challenge of Information <br> Visualization Evaluzation',
         color: 'hsl(251,69%,34%)', size: 35}, // label 프로퍼티가 있으면 노드 안에 제목이 됨
     {id: 2, title: '2', color: 'hsl(251,69%,40%)'},
-    {id: 3, title: '3',color: 'hsl(251,69%,50%)'},
+    {id: 3, title: '3', color: 'hsl(251,69%,50%)'},
     {id: 4, title: '4', color: 'hsl(251,69%,55%)'},
     {id: 5, title: '5', color: 'hsl(251,69%,60%)'},
     {id: 6, title: '6', color: 'hsl(251,69%,70%)'},
@@ -71,12 +71,12 @@ var network = new vis.Network(container, data, options);
 
 network.on('afterDrawing', (canvas) => {
     console.log('canvas : ', canvas);
-    // myCanvas.moveTo(0, 0);
-    // myCanvas.lineTo(200, 100);
-    // myCanvas.stroke();
-    if (_.isEmpty(network.getSelectedNodes())) {
-        console.log('asdf');
-    }
+    // canvas.moveTo(0, 0);
+    canvas.lineTo(200, 100);
+    canvas.stroke();
+    // if (_.isEmpty(network.getSelectedNodes())) {
+    //     console.log('asdf');
+    // }
 
 });
 
